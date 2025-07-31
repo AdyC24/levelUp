@@ -35,19 +35,10 @@ export default function Sidebar() {
           {openMenu === "pengguna" && (
             <ul className="ml-4 mt-1 space-y-1 text-sm">
               <li>
-                <NavLink to="/users/parents" className={linkClass}>Daftar Orang Tua</NavLink>
-              </li>
-              <li>
-                <NavLink to="/users/students" className={linkClass}>Daftar Siswa</NavLink>
-              </li>
-              <li>
                 <NavLink to="/users/teachers" className={linkClass}>Daftar Guru</NavLink>
               </li>
               <li>
-                <NavLink to="/users/register-parent" className={linkClass}>Daftarkan Orang Tua</NavLink>
-              </li>
-              <li>
-                <NavLink to="/users/add-student" className={linkClass}>Tambah Siswa</NavLink>
+                <NavLink to="/users/students" className={linkClass}>Daftar Siswa</NavLink>
               </li>
             </ul>
           )}
