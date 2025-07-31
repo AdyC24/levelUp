@@ -7,9 +7,9 @@ import Unauthorized from '@/pages/Unauthorized'
 import StudentDashboard from '@/pages/StudentDashboard'
 import AdminDashboard from '@/pages/AdminDashboard'
 import TeacherDashboard from '@/pages/TeacherDashboard'
-import RegisterTeacher from '@/pages/RegisterTeacher';
-import RegisterParent from '@/pages/RegisterParent';
+import RegisterTeacher from '@/pages/RegisterTeacher'
 import RegisterStudent from '@/pages/RegisterStudent';
+import StudentList from '@/pages/StudentList';
 import TeacherList from '@/pages/TeacherList';
 import MainLayout from '@/layouts/MainLayout';
 
@@ -74,17 +74,7 @@ const appRoutes = [
       { index: true, element: <RegisterTeacher /> }
     ]
   },
-  {path: '/users/register-parent',
-    element: (
-      <RoleRoute allowedRoles={['admin']}>
-        <MainLayout />
-      </RoleRoute>
-    ),
-    children: [
-      { index: true, element: <RegisterParent /> }
-    ]
-  },
-  {path: '/users/siswa',
+  {path: '/register-student',
     element: (
       <RoleRoute allowedRoles={['admin']}>
         <MainLayout />
@@ -92,6 +82,16 @@ const appRoutes = [
     ),
     children: [
       { index: true, element: <RegisterStudent /> }
+    ]
+  },
+  {path: '/users/students',
+    element: (
+      <RoleRoute allowedRoles={['admin']}>
+        <MainLayout />
+      </RoleRoute>
+    ),
+    children: [
+      { index: true, element: <StudentList /> }
     ]
   },
   {path: '/teachers',
